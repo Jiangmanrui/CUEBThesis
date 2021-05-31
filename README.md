@@ -1,7 +1,9 @@
 # 首都经济贸易大学博士学位论文Tex模版
-https://github.com/CSUcse/CSUthesis
 
 本项目的目的是为了创建一个符合首都经济贸易大学研究生学位论文（博士）撰写规范的TeX模板，解决学位论文撰写时格式调整的痛点。
+
+本项目基于中南大学研究生学位论文模板改编（https://github.com/CSUcse/CSUthesis）
+参考文献采用了北京邮电大学研究生学位论文参考文献 BibTeX 样式（http://code.google.com/p/buptthesis/）
 
 本模板依照[《首都经济贸易大学研究生学位论文写作指南（试行）》2016-11-14](https://yjs.cueb.edu.cn/glzd/gzwj/xkyxw/57066.htm)编写。
 
