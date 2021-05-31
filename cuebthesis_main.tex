@@ -1,0 +1,140 @@
+\documentclass{CUEBthesis}
+\include{content/info}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 中文封面
+% -----------------------------------------------%
+\makecoverpage
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 前置部分的页眉页脚设置
+% -----------------------------------------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 英文封面
+% -----------------------------------------------%
+
+\makecoverpageen
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 声明页
+% -----------------------------------------------%
+\newgeometry{top=25.4mm,bottom=25.4mm,left=31.7mm,right=31.7mm}
+\announcement
+\restoregeometry
+\newpage
+
+% 正文和后置部分用阿拉伯数字编连续码，前置部分用罗马数字单独编连续码（封面除外）。
+% 设置声明页后面的页码
+
+\fancyhf{} % 清空原有格式
+\renewcommand{\headrulewidth}{0pt}
+\setcounter{page}{1} % 从1开始编号页码
+\pagenumbering{Roman} % 大写罗马字母
+% 设置页眉和页脚
+\pagestyle{fancy}
+\fancyhf[ROF]{\zihao{5}\thepage}
+\fancyhf[LEF]{\zihao{5}\thepage}
+% 正文以前部分无需页眉
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 中文摘要
+% -----------------------------------------------%
+\makeatletter\@openrightfalse 
+\include{content/abstractcn}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 英文摘要
+% -----------------------------------------------%
+\include{content/abstracten}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 正文页眉页脚
+% -----------------------------------------------%
+\setcounter{page}{1} % 重置目录页码为小写罗马字体
+\pagenumbering{roman} % 设置页码为小写罗马字体
+% 设置页眉和页脚 %
+\pagestyle{fancy}
+\fancyhf[ROF]{\zihao{5}\thepage}
+\fancyhf[LEF]{\zihao{5}\thepage}  % 所有（奇数和偶数）中间页脚
+
+% 目录
+% -------------------------------------------%
+\setlength{\baselineskip}{20pt}
+\tableofcontents
+\newpage
+
+% 图表目录 （没见有人写过）
+%\setlength{\baselineskip}{20pt}
+%\listoffigures
+%\newpage
+%
+%\setlength{\baselineskip}{20pt}
+%\listoftables
+%\newpage
+
+
+% 重新设置正文行间距，因为前置部分设置时候行间距被改过
+\renewcommand*{\baselinestretch}{1.0}   % 几倍行间距
+\setlength{\baselineskip}{20pt}         % 基准行间距
+
+% 正文
+
+%页眉页脚
+\pagestyle{fancy}
+\fancypagestyle{plain}{}
+\renewcommand{\chaptername}{第{\thechapter}章}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\quad #1}{}}
+\renewcommand{\headrulewidth}{1pt}
+\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[CEH]{\songti \zihao{-5} \leftmark} % 偶数页显示章节名
+% --------------------------------------------%
+\setcounter{page}{1} % 重置页码编号
+\pagenumbering{arabic} % 设置页码编号为阿拉伯数字
+\fancyhf[ROF]{\zihao{5}\thepage}
+\fancyhf[LEF]{\zihao{5}\thepage}
+
+\include{content/chap1}
+
+\include{content/chap2}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 后续内容，章节无编号
+% --------------------------------------------%
+
+\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[CEH]{\songti \zihao{-5} 结论}
+
+\include{content/conclusion}
+
+\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[CEH]{\songti \zihao{-5} 参考文献}
+
+\reference{thesis-references}
+
+\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[CEH]{\songti \zihao{-5} 附录A}
+
+\include{content/appdx}
+
+\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[CEH]{\songti \zihao{-5} 攻读博士学位期间取得的研究成果} 
+
+\include{content/additional}
+
+\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[CEH]{\songti \zihao{-5} 致谢} 
+
+\include{content/thanks}
+
+\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[CEH]{\songti \zihao{-5} 作者简介} 
+
+\include{content/authorintro}
+
+\end{document}
