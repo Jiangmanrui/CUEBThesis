@@ -1,5 +1,19 @@
-%% 本模版根据首都经济贸易大学研究生学位论文写作指南创建
-% 参考中南大学研究生学位论文模板改编 https://github.com/CSUcse/CSUthesis
+%
+% 本模版根据中南大学研究生学位论文撰写规范创建
+% 参考源：http://gra.its.csu.edu.cn/yjsy/pygl/wjtzxq54858_3_6.html
+% 论文内容一般应由十一个主要部分组成，依次为：
+% 1.封面、扉页；
+% 2.学位论文原创性声明和版权使用授权书；
+% 3.中文摘要；
+% 4.英文摘要；
+% 5.目录；
+% 6.符号说明（必要时）；
+% 7.论文正文；
+% 8.参考文献；
+% 9.附录（必要时）；
+% 10.攻读博（硕）士学位期间主要研究成果；
+% 11.致谢。
+%
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{CUEBthesis}[2018/12/30 v1.1 Standard LaTeX document class]
@@ -425,7 +439,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 }
 % 表格格式
 % ------------------------------------------------------%
-\renewcommand{\thetable}{\arabic{section}-\arabic{table}}
+\renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}
 % \renewcommand {\thetable} {\thesection-\arabic{table}}
 \captionsetup[table]{
 	format=plain,      % 标题从第二行开始是否缩进，plain无缩进，hang有缩进
@@ -493,7 +507,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand*{\cueb@cap@solution}{解}
 
 % 编号分章节。如需要连续编号，注释\makeatletter下面对应内容即可。
-\renewcommand{\theequation}{\arabic{section}-\arabic{equation}}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
 \makeatletter
 \@addtoreset{figure}{section}
 \@addtoreset{table}{section}
@@ -505,8 +519,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 %------------------------结论 -------------------------------
 \newcommand{\conclusion}{
-    \chapter*{结论}
-    \addcontentsline{toc}{chapter}{结论}
+    \chapter*{总结与展望}
+    \addcontentsline{toc}{chapter}{总结与展望}
 }{\clearpage}
 %------------------------ reference ------------------------
 \newcommand{\reference}[1] {
