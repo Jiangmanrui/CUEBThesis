@@ -69,6 +69,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % multirow 支持在表格中跨行
 \RequirePackage{multirow}
 % 调整间隔, 让表格更好看些
+%表格脚注
+\RequirePackage{threeparttable}
 \RequirePackage{bigstrut}
 %在跨行表格中输入定界符
 \RequirePackage{bigdelim}
@@ -108,6 +110,9 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{scrextend}
 \deffootnote[1.5em]{1.5em}{1.5em}{\zihao{-5}\songti\thefootnotemark \space}
 
+\RequirePackage[noend]{algpseudocode}
+\RequirePackage{algorithmicx,algorithm}
+\floatname{algorithm}{算法}
 % 页面布局 %
 % -------------------------------------------------------%
 \geometry{top=25mm,bottom=25mm,left=30mm,right=20mm}
