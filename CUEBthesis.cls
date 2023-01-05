@@ -100,6 +100,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % \RequirePackage{natbib} % gbt7714.sty已经包含了natbib宏包
 %\RequirePackage[numbers,2005]{gbt7714}
 % 参考文献标记为上标
+\RequirePackage[numbers,sort&compress]{natbib}
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
 % 设置脚注
 \RequirePackage{pifont}
