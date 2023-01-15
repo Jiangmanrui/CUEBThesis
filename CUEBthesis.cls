@@ -540,8 +540,6 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 }{\clearpage}
 %%------------------------附录-------------------------------
 \renewenvironment{appendix}{
-    \chapter*{附录A}
-    \addcontentsline{toc}{chapter}{附录A}
     \songti \zihao{-4}
     \renewcommand*{\baselinestretch}{1.0}
     \setlength{\baselineskip}{20pt}
