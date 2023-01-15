@@ -41,7 +41,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 中文摘要
 % -----------------------------------------------%
-\makeatletter\@openrightfalse 
+\makeatletter\@openrightfalse
 \include{content/abstractcn}
 \newpage
 
@@ -89,8 +89,8 @@
 \renewcommand{\chaptername}{第{\thechapter}章}
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername\quad #1}{}}
 \renewcommand{\headrulewidth}{1pt}
-\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
-\fancyhf[CEH]{\songti \zihao{-5} \leftmark} % 偶数页显示章节名
+\fancyhf[ROH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[LEH]{\songti \zihao{-5} \leftmark} % 偶数页显示章节名
 % --------------------------------------------%
 \setcounter{page}{1} % 重置页码编号
 \pagenumbering{arabic} % 设置页码编号为阿拉伯数字
@@ -107,33 +107,38 @@
 % 后续内容，章节无编号
 % --------------------------------------------%
 
-\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
-\fancyhf[CEH]{\songti \zihao{-5} 结论}
+\fancyhf[ROH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[LEH]{\songti \zihao{-5} 结论}
 
 \include{content/conclusion}
 
-\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
-\fancyhf[CEH]{\songti \zihao{-5} 参考文献}
+\fancyhf[ROH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[LEH]{\songti \zihao{-5} 参考文献}
 
 \reference{thesis-references}
 
-\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
-\fancyhf[CEH]{\songti \zihao{-5} 附录A}
+\fancyhf[ROH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[LEH]{\songti \zihao{-5} 附录A}
 
-\include{content/appdx}
+\include{content/appdxa}
 
-\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
-\fancyhf[CEH]{\songti \zihao{-5} 攻读博士学位期间取得的研究成果} 
+\fancyhf[ROH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[LEH]{\songti \zihao{-5} 附录B}
+
+\include{content/appdxb}
+
+\fancyhf[ROH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[LEH]{\songti \zihao{-5} 攻读博士学位期间取得的研究成果}
 
 \include{content/additional}
 
-\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
-\fancyhf[CEH]{\songti \zihao{-5} 致谢} 
+\fancyhf[ROH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[LEH]{\songti \zihao{-5} 致谢}
 
 \include{content/thanks}
 
-\fancyhf[COH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
-\fancyhf[CEH]{\songti \zihao{-5} 作者简介} 
+\fancyhf[ROH]{\songti \zihao{-5} 首都经济贸易大学博士学位论文}
+\fancyhf[LEH]{\songti \zihao{-5} 作者简介}
 
 \include{content/authorintro}
 
