@@ -111,7 +111,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{scrextend}
 \deffootnote[1.5em]{1.5em}{1.5em}{\zihao{-5}\songti\thefootnotemark \space}
 
-\RequirePackage[noend]{algpseudocode}
+\RequirePackage{algpseudocode}
 \RequirePackage{algorithmicx,algorithm}
 \floatname{algorithm}{算法}
 % 页面布局 %
