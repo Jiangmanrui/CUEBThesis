@@ -84,3 +84,7 @@
 请使用`xelatex`，对`cuebthesis_main.tex`文件进行编译。如果出现图表连接问题，请运行两遍。
 
 使用高级文本编辑器，如sublime等，否则可能因为ANSI、UTF-8等编码格式问题编译失败。
+
+## 参考文献
+
+注意：中文参考文献需要在bib中增加一个新的language条目，内容为：language=Chinese，以匹配相应的格式。
