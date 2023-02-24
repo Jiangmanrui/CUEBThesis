@@ -111,7 +111,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{scrextend}
 \deffootnote[1.5em]{1.5em}{1.5em}{\zihao{-5}\songti\thefootnotemark \space}
 
-\RequirePackage[ruled,linesnumbered]{algorithm2e}
+\RequirePackage[ruled,linesnumbered,algochapter]{algorithm2e}
 \renewcommand{\algorithmcfname}{算法}
 % 页面布局 %
 % -------------------------------------------------------%
@@ -443,7 +443,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 图下方描述宋体字
 \DeclareCaptionFont{song}{\songti}
 \DeclareCaptionFont{eleven}{\fontsize{11pt}{\baselineskip}}
-\renewcommand{\thefigure}{\arabic{chapter}-\arabic{figure}}
+\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
 % \renewcommand{\thefigure} {\thesection-\arabic{figure}}
 \captionsetup[figure]{
 	format=plain,      % 标题从第二行开始是否缩进，plain无缩进，hang有缩进
@@ -453,7 +453,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 }
 % 表格格式
 % ------------------------------------------------------%
-\renewcommand{\thetable}{\arabic{chapter}-\arabic{table}}
+\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
 % \renewcommand {\thetable} {\thesection-\arabic{table}}
 \captionsetup[table]{
 	format=plain,      % 标题从第二行开始是否缩进，plain无缩进，hang有缩进
@@ -521,7 +521,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand*{\cueb@cap@solution}{解}
 
 % 编号分章节。如需要连续编号，注释\makeatletter下面对应内容即可。
-\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
+\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
 %\makeatletter
 %\@addtoreset{figure}{section}
 %\@addtoreset{table}{section}
