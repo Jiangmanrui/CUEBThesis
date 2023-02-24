@@ -360,6 +360,15 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \renewcommand\cftchapdotsep{0.5}%虚线间隔
 \setlength{\cftbeforetoctitleskip}{0em}
 \setlength{\cftaftertoctitleskip}{0em}
+
+% *5. 图表清单（首经贸论文很少见到） %
+% -----------------------------------------------%
+
+\renewcommand{\listfigurename}{\vspace*{-24pt}\hfill \heiti \zihao{3} 图目录\hfill\vspace{-18pt}}
+
+\renewcommand{\listtablename}{\vspace*{-24pt}\hfill \heiti \zihao{3} 表目录\hfill\vspace{-18pt}}
+
+
 % 定义作为标题的格式
 % \titleformat{command}[shape]%定义标题类型和标题样式
 %               {format}%定义标题格式
@@ -513,11 +522,11 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 % 编号分章节。如需要连续编号，注释\makeatletter下面对应内容即可。
 \renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
-\makeatletter
-\@addtoreset{figure}{section}
-\@addtoreset{table}{section}
-\@addtoreset{equation}{section}
-\makeatother
+%\makeatletter
+%\@addtoreset{figure}{section}
+%\@addtoreset{table}{section}
+%\@addtoreset{equation}{section}
+%\makeatother
 
 
 %------------------------此后章节无编号-----------------------
@@ -538,11 +547,19 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     \bibliography{#1}
 }{\clearpage}
 %%------------------------附录-------------------------------
+%\renewenvironment{appendix}{
+%    \chapter*{附录A}
+%    \addcontentsline{toc}{chapter}{附录A}
+%    \songti \zihao{-4}
+%    \renewcommand*{\baselinestretch}{1.0}
+%    \setlength{\baselineskip}{20pt}
+%}{\clearpage}
 \renewenvironment{appendix}{
     \songti \zihao{-4}
     \renewcommand*{\baselinestretch}{1.0}
     \setlength{\baselineskip}{20pt}
 }{\clearpage}
+
 %%------------------------研究成果----------------------------
 \newcommand{\additional}{
     \chapter*{攻读博士学位期间取得的研究成果}
