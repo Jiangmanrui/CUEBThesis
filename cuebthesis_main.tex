@@ -69,11 +69,19 @@
 
 % 图表目录 （没见有人写过）
 %\setlength{\baselineskip}{20pt}
+%{%
+%\let\oldnumberline\numberline
+%\renewcommand{\numberline}{\figurename~\oldnumberline}
 %\listoffigures
+%}
 %\newpage
 %
 %\setlength{\baselineskip}{20pt}
+%{
+%\let\oldnumberline\numberline
+%\renewcommand{\numberline}{\tablename~\oldnumberline}
 %\listoftables
+%}
 %\newpage
 
 
