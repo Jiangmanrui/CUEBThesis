@@ -55,7 +55,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % 超链接 hyperref 的设置
 \RequirePackage{hyperref}
 \hypersetup{pdfencoding=auto}
-\hypersetup{colorlinks,linkcolor=black,anchorcolor=black,citecolor=black}
+\hypersetup{colorlinks,linkcolor=black,anchorcolor=black,citecolor=black,urlcolor=black}
 % 插入图片
 \RequirePackage{graphicx}
 % 表格
