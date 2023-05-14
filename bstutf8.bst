@@ -1265,8 +1265,7 @@ FUNCTION {n.dashify}
 FUNCTION {format.year.volume.number} {
   year empty$
     { "" }
-    { new.block
-      year 
+    { year 
       volume empty$
 	'skip$
 	{ bbl.comma * volume * }
@@ -2144,7 +2143,7 @@ FUNCTION {periodical} {
 FUNCTION {format.journal.title} {
   journal empty$
     { "" }
-    { new.block journal }
+    { new.sentence journal }
   if$
 }
 
