@@ -323,7 +323,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % -----------------------------------------------%
 \newcommand{\abstractcn}{
     \clearpage
-    \chapter*{中文摘要}
+    \chapter*{摘要}
     \songti \zihao{-4}
     \renewcommand*{\baselinestretch}{1.0}
     \setlength{\baselineskip}{20pt}
