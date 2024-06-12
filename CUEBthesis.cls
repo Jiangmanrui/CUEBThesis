@@ -34,6 +34,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{ctex}
 % 页面布局
 \RequirePackage{geometry}
+\RequirePackage{float}
 % 数学宏包
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
@@ -62,6 +63,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{array}
 % 长表格
 \RequirePackage{longtable}
+% 表格垂直居上
+\RequirePackage{placeins}
 % % 弹性表格
 % \RequirePackage{tabularx}
 % booktabs 提供了\toprule 等命令.
@@ -111,12 +114,16 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \RequirePackage{scrextend}
 \deffootnote[1.5em]{1.5em}{1.5em}{\zihao{-5}\songti\thefootnotemark \space}
 
+\RequirePackage{etoolbox}
 \RequirePackage[ruled,linesnumbered,algochapter]{algorithm2e}
 \renewcommand{\algorithmcfname}{算法}
 \renewcommand\thealgocf{\csname the\algocf@within\endcsname-\@arabic\c@algocf}
+
 % 页面布局 %
 % -------------------------------------------------------%
-\geometry{top=25mm,bottom=25mm,left=30mm,right=20mm}
+%\geometry{top=25mm,bottom=25mm,left=30mm,right=20mm}
+% 电子版
+\geometry{top=25mm,bottom=25mm,left=25mm,right=25mm}
 % 给页眉留足空间（否则会有 \headheight is too small的warning）
 \setlength{\headheight}{14.5pt}
 % “磅”是衡量印刷字体大小的单位,约等于七十二分之一英寸。
@@ -144,8 +151,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 %  中文标题名称
 \newcommand*{\cueb@cap@contentsname}{目录}
-\newcommand*{\cueb@cap@listfigurename}{插图清单}
-\newcommand*{\cueb@cap@listtablename}{附表清单}
+\newcommand*{\cueb@cap@listfigurename}{图目录}
+\newcommand*{\cueb@cap@listtablename}{表目录}
 \newcommand*{\cueb@cap@refname}{参考文献}
 \newcommand*{\cueb@cap@indexname}{索引}
 \newcommand*{\cueb@cap@figurename}{图}
@@ -226,6 +233,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
             }\par
     }
 }
+
 %英文封面
 \newcommand{\makecoverpageen} {
     \thispagestyle{empty}
@@ -254,6 +262,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
         \par
     }
 }
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 2. 原创性声明和学位论文版权使用授权书
@@ -318,6 +327,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
     }
 }
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 3. 中文摘要
 % -----------------------------------------------%
@@ -369,6 +379,15 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 
 \renewcommand{\listtablename}{\vspace*{-24pt}\hfill \heiti \zihao{3} 表目录\hfill\vspace{-18pt}}
 
+% 设置主要符号表
+\newcommand{\symbollist}{
+    \clearpage
+    \chapter*{主要符号表}
+    \songti \zihao{-4}
+    \renewcommand*{\baselinestretch}{1.0}
+    \setlength{\baselineskip}{20pt}
+}{\clearpage}
+
 
 % 定义作为标题的格式
 % \titleformat{command}[shape]%定义标题类型和标题样式
@@ -414,7 +433,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 % TODO %
 % 默认情况下, \LaTeX{} 要求每页的文字至少占据 20%,否则该页就只单独放置一个浮动环境,
 % 而这通常不是我们想要的, 我们将这个要求降低到 5%.
-\renewcommand*{\textfraction}{0.05}
+\renewcommand*{\textfraction}{0.0}
 % 有时如果多个浮动环境连续放在一起, \LaTeX{}
 % 会将它们分在几个不同页，即使它们可在同一页放
 % 得下. 我们可以通过修改 |\topfraction| 和 |\bottomfraction| 分别设置顶端和底端的浮
@@ -463,6 +482,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 	position=top
 }
 
+
 % 列表环境设置 % 未调试
 % ------------------------------------------------------------------%
 % \RequirePackage{listings}
@@ -489,6 +509,7 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 } {
     \cueb@endoldtabular\egroup
 }
+
 
 % 表格字号应比正文小，请在插入表格时设置
 
@@ -522,7 +543,8 @@ Just choose `xelatex', no `pdflatex' or `latex' and so on.}
 \newcommand*{\cueb@cap@solution}{解}
 
 % 编号分章节。如需要连续编号，注释\makeatletter下面对应内容即可。
-\renewcommand{\theequation}{\arabic{chapter}.\arabic{equation}}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
+%\renewcommand{\optalgochapter}{\arabic{chapter}-\arabic{algorithm}}
 %\makeatletter
 %\@addtoreset{figure}{section}
 %\@addtoreset{table}{section}
